@@ -1,197 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SyahrulProject | Jurusan TKJ</title>
-<meta name="description" content="Informasi Jurusan Teknik Komputer dan Jaringan SMK Binong Permai">
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:#f4f7fc;color:#172554;line-height:1.7}
-header{background:#071a38;color:white;padding:18px 8%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}
-.logo{font-size:23px;font-weight:bold;color:#60a5fa}
-nav a{color:white;text-decoration:none;margin:0 10px;font-size:14px}
-nav a:hover{color:#60a5fa}
-.hero{background:linear-gradient(135deg,#071a38,#0755c9);color:white;padding:90px 8%;text-align:center}
-.hero h1{font-size:clamp(32px,5vw,52px);line-height:1.2;margin-bottom:20px}
-.hero h1 span{color:#60c5ff}
-.hero p{max-width:680px;margin:0 auto 28px;color:#dbeafe}
-.btn{display:inline-block;background:#1684ff;color:white;text-decoration:none;padding:12px 22px;border-radius:9px;font-weight:bold;margin:5px}
-.btn:hover{background:#0064d8}
-.btn-outline{border:1px solid #b8d8ff;background:transparent}
-section{padding:65px 8%}
-.section-title{text-align:center;font-size:30px;margin-bottom:12px}
-.section-desc{text-align:center;color:#64748b;max-width:700px;margin:0 auto 35px}
-.about{background:white}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:30px}
-.card{background:white;padding:25px;border-radius:15px;box-shadow:0 5px 25px #0b2b5510;border:1px solid #e4ebf5;transition:.2s}
-.card:hover{transform:translateY(-4px)}
-.card .icon{font-size:34px;margin-bottom:12px}
-.card h3{margin-bottom:10px;color:#0755c9}
-.card p{font-size:14px;color:#64748b}
-.dark{background:#071a38;color:white}
-.dark .section-desc{color:#b8c9e3}
-.dark .card{background:#10294d;border-color:#25446b}
-.dark .card h3{color:#76bdff}
-.dark .card p{color:#c1d0e5}
-.contact{background:#eaf2ff}
-.contact-box{max-width:760px;margin:auto;background:white;padding:28px;border-radius:16px;box-shadow:0 8px 30px #173f7510}
-.contact-row{padding:15px 0;border-bottom:1px solid #e5eaf2;overflow-wrap:anywhere}
-.contact-row:last-child{border-bottom:0}
-.contact-row strong{display:block;color:#0755c9;margin-bottom:4px}
-.contact-row a{color:#0755c9;text-decoration:none}
-footer{text-align:center;padding:25px;background:#041126;color:#b8c9e3;font-size:13px}
-@media(max-width:600px){header{justify-content:center;text-align:center}nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}nav a{margin:0 5px}.hero{padding:65px 6%}section{padding:50px 6%}.section-title{font-size:26px}}
-</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07101f">
+<meta name="description" content="SyahrulProject TKJ — belajar komputer, jaringan, coding, dan troubleshooting secara interaktif.">
+<title>SyahrulProject | TKJ Cyber Lab</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-  <div class="logo">SyahrulProject.</div>
-  <nav>
-    <a href="#beranda">Beranda</a>
-    <a href="#tentang">Tentang TKJ</a>
-    <a href="#materi">Materi</a>
-    <a href="#karier">Karier</a>
-    <a href="#kontak">Kontak</a>
+<header class="site-header">
+  <a class="brand" href="#beranda" aria-label="SyahrulProject beranda"><span class="brand-mark">SP</span><span>Syahrul<span class="muted-brand">Project</span><small>TKJ CYBER LAB</small></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Buka menu"><span></span><span></span><span></span></button>
+  <nav class="nav-links" id="navLinks">
+    <a href="#tentang">Tentang</a><a href="#materi">Materi</a><a href="#lab">TKJ Labs</a><a href="#progres">Progres</a><a href="#karier">Karier</a><a class="nav-cta" href="#kontak">Kontak ↗</a>
   </nav>
 </header>
-
 <main>
 <section class="hero" id="beranda">
-  <p>TEKNOLOGI • KREATIVITAS • MASA DEPAN</p>
-  <h1>Mengenal Jurusan <span>Teknik Komputer dan Jaringan</span></h1>
-  <p>Selamat datang di SyahrulProject! Mari mengenal jurusan TKJ, dunia komputer, jaringan internet, server, dan teknologi informasi.</p>
-  <a class="btn" href="#tentang">Jelajahi TKJ ↓</a>
-  <a class="btn btn-outline" href="#kontak">Hubungi Saya</a>
-</section>
-
-<section class="about" id="tentang">
-  <h2 class="section-title">Apa Itu Jurusan TKJ?</h2>
-  <p class="section-desc">Teknik Komputer dan Jaringan adalah bidang keahlian yang mempelajari perangkat komputer, sistem operasi, jaringan, serta cara menghubungkan dan merawat perangkat teknologi.</p>
-  <div class="cards">
-    <article class="card">
-      <div class="icon">💻</div>
-      <h3>Komputer</h3>
-      <p>Mempelajari komponen komputer, fungsi perangkat keras, perakitan PC, dan pemeliharaan perangkat.</p>
-    </article>
-    <article class="card">
-      <div class="icon">🌐</div>
-      <h3>Jaringan</h3>
-      <p>Mengenal jaringan LAN dan WAN, kabel jaringan, IP address, switch, router, serta koneksi internet.</p>
-    </article>
-    <article class="card">
-      <div class="icon">🖥️</div>
-      <h3>Sistem Operasi</h3>
-      <p>Belajar instalasi, konfigurasi dasar, pembaruan, dan pemeliharaan sistem operasi.</p>
-    </article>
+ <div class="hero-glow glow-one"></div><div class="hero-glow glow-two"></div>
+ <div class="container hero-grid">
+  <div class="hero-copy">
+   <div class="eyebrow"><span class="pulse-dot"></span> TEKNOLOGI • KREATIVITAS • MASA DEPAN</div>
+   <h1>Jelajahi Dunia <span class="gradient-text">Teknik Komputer &amp; Jaringan</span></h1>
+   <p class="hero-description">Ruang belajar TKJ interaktif untuk mengenal hardware, jaringan, coding, dan pemecahan masalah teknologi — satu langkah setiap hari.</p>
+   <div class="hero-actions"><a class="button button-primary" href="#lab">Mulai eksplorasi <span>↗</span></a><a class="button button-secondary" href="#materi">Jelajahi materi</a></div>
+   <div class="hero-meta"><div class="avatar-stack"><span>PC</span><span>IP</span><span>JS</span></div><p><strong>Belajar dengan praktik</strong><br><span>Materi • Simulasi • Tantangan</span></p></div>
   </div>
-</section>
-
-<section id="materi">
-  <h2 class="section-title">Materi yang Dipelajari</h2>
-  <p class="section-desc">Berikut beberapa contoh keterampilan yang umum dipelajari dalam bidang TKJ.</p>
-  <div class="cards">
-    <article class="card">
-      <div class="icon">🔧</div>
-      <h3>Perakitan PC</h3>
-      <p>Mengenal motherboard, prosesor, RAM, penyimpanan, dan komponen komputer lainnya.</p>
-    </article>
-    <article class="card">
-      <div class="icon">🔌</div>
-      <h3>Instalasi Jaringan</h3>
-      <p>Mempelajari kabel UTP, konektor RJ45, topologi jaringan, dan konfigurasi dasar perangkat jaringan.</p>
-    </article>
-    <article class="card">
-      <div class="icon">🛡️</div>
-      <h3>Keamanan Digital</h3>
-      <p>Mengenal kata sandi yang kuat, pembaruan sistem, pencadangan data, dan keamanan saat berinternet.</p>
-    </article>
-    <article class="card">
-      <div class="icon">⚙️</div>
-      <h3>Troubleshooting</h3>
-      <p>Belajar menemukan penyebab masalah dan melakukan pemeriksaan pada komputer atau jaringan.</p>
-    </article>
-    <article class="card">
-      <div class="icon">🗄️</div>
-      <h3>Server</h3>
-      <p>Mengenal fungsi server dan layanan yang memungkinkan perangkat saling berbagi sumber daya.</p>
-    </article>
-    <article class="card">
-      <div class="icon">📡</div>
-      <h3>Teknologi Internet</h3>
-      <p>Memahami cara perangkat terhubung dan berkomunikasi melalui jaringan komputer.</p>
-    </article>
+  <div class="hero-visual" aria-label="Ilustrasi jaringan komputer">
+   <div class="visual-orbit orbit-a"></div><div class="visual-orbit orbit-b"></div>
+   <div class="network-card"><div class="network-top"><span><i class="status-dot"></i> NETWORK OVERVIEW</span><span class="live">● DEMO LIVE</span></div>
+    <div class="network-map"><div class="node node-router"><span>◈</span><b>ROUTER</b><small>Gateway</small></div><div class="connection connection-a"></div><div class="connection connection-b"></div><div class="node node-switch"><span>▦</span><b>SWITCH</b><small>LAN Core</small></div><div class="node node-pc"><span>▣</span><b>CLIENT 01</b><small>192.168.1.10</small></div><div class="node node-server"><span>▤</span><b>SERVER</b><small>192.168.1.2</small></div></div>
+    <div class="network-footer"><span>● 4 NODE AKTIF</span><span>LATENCY <b>12 ms</b></span><span>STATUS <b>STABIL</b></span></div>
+   </div>
   </div>
+ </div>
+ <div class="container ticker"><span>HARDWARE</span><i>✦</i><span>NETWORKING</span><i>✦</i><span>PROGRAMMING</span><i>✦</i><span>TROUBLESHOOTING</span><i>✦</i><span>SYSTEM ADMIN</span></div>
 </section>
-
-<section class="dark" id="karier">
-  <h2 class="section-title">Prospek Karier TKJ</h2>
-  <p class="section-desc">Keterampilan TKJ dapat menjadi bekal untuk mengembangkan karier atau melanjutkan pendidikan di bidang teknologi.</p>
-  <div class="cards">
-    <article class="card">
-      <h3>Teknisi Komputer</h3>
-      <p>Memeriksa, merawat, dan membantu memperbaiki perangkat komputer.</p>
-    </article>
-    <article class="card">
-      <h3>Teknisi Jaringan</h3>
-      <p>Membantu pemasangan serta pemeliharaan jaringan komputer.</p>
-    </article>
-    <article class="card">
-      <h3>IT Support</h3>
-      <p>Membantu pengguna mengatasi masalah perangkat dan aplikasi.</p>
-    </article>
-    <article class="card">
-      <h3>Administrator Sistem</h3>
-      <p>Mendukung pengelolaan sistem komputer dan layanan server.</p>
-    </article>
-  </div>
-</section>
-
-<section class="contact" id="kontak">
-  <h2 class="section-title">Profil & Kontak</h2>
-  <p class="section-desc">Informasi pembuat website dan sekolah.</p>
-  <div class="contact-box">
-    <div class="contact-row">
-      <strong>Nama Website</strong>
-      SyahrulProject
-    </div>
-    <div class="contact-row">
-      <strong>Sekolah</strong>
-      SMK Binong Permai
-    </div>
-    <div class="contact-row">
-      <strong>Alamat</strong>
-      Sukabakti, Kecamatan Curug, Kabupaten Tangerang, Banten 15810
-    </div>
-    <div class="contact-row">
-      <strong>Nomor Telepon</strong>
-      <a href="tel:+6287746332764">087746332764</a>
-    </div>
-    <div class="contact-row">
-      <strong>WhatsApp</strong>
-      <a href="https://wa.me/6287746332764" target="_blank" rel="noopener noreferrer">Chat saya melalui WhatsApp ↗</a>
-    </div>
-    <div class="contact-row">
-      <strong>Email</strong>
-      <a href="mailto:syahrulnugraha211@gmail.com">syahrulnugraha211@gmail.com</a>
-    </div>
-    <div class="contact-row">
-      <strong>Lokasi Sekolah</strong>
-      <a href="https://www.google.com/maps/search/?api=1&query=SMK+Binong+Permai+Sukabakti+Curug+Tangerang" target="_blank" rel="noopener noreferrer">Lihat lokasi di Google Maps ↗</a>
-    </div>
-  </div>
-</section>
-</main>
-
-<footer>
-  <p>© <span id="tahun"></span> SyahrulProject | Website Pengenalan Jurusan TKJ</p>
-  <p>Belajar teknologi hari ini untuk masa depan yang lebih baik.</p>
-</footer>
-
-<script>
-document.getElementById("tahun").textContent = new Date().getFullYear();
-</script>
+<section class="section" id="tentang"><div class="container two-column">
+ <div class="section-intro"><span class="section-kicker">01 / KENALI TKJ</span><h2>Teknologi bukan cuma dipakai. <span class="gradient-text-dark">Pahami cara kerjanya.</span></h2></div>
+ <div class="intro-copy"><p>Teknik Komputer dan Jaringan (TKJ) mempelajari perangkat komputer, sistem operasi, jaringan, server, serta pemeliharaan teknologi informasi.</p><p>Di SyahrulProject, kamu bisa mulai dari konsep dasar lalu mencoba latihan interaktif yang berjalan langsung di browser.</p><div class="mini-stats"><div><strong>01</strong><span>Pelajari konsep</span></div><div><strong>02</strong><span>Coba simulasi</span></div><div><strong>03</strong><span>Uji pemahaman</span></div></div></div>
+</div></section>
+<section class="section section-alt" id="materi"><div class="container"><div class="center-heading"><span class="section-kicker">02 / LEARNING PATH</span><h2>Fondasi <span class="gradient-text-dark">TKJ</span></h2><p>Pilih bidang yang ingin kamu pelajari. Tandai materi sebagai selesai untuk menyimpan progres di browser ini.</p></div>
+<div class="skill-grid">
+ <article class="skill-card"><div class="skill-icon">▣</div><div class="card-index">MODULE 01</div><h3>Hardware &amp; PC</h3><p>CPU, motherboard, RAM, SSD, power supply, perakitan dan perawatan komputer.</p><label class="complete-check"><input type="checkbox" class="progress-check" data-progress="hardware"> Tandai selesai</label></article>
+ <article class="skill-card"><div class="skill-icon">⌘</div><div class="card-index">MODULE 02</div><h3>Jaringan Dasar</h3><p>LAN/WAN, topologi, kabel UTP, IP address, subnet mask, router, dan switch.</p><label class="complete-check"><input type="checkbox" class="progress-check" data-progress="network"> Tandai selesai</label></article>
+ <article class="skill-card"><div class="skill-icon">⌁</div><div class="card-index">MODULE 03</div><h3>Sistem Operasi</h3><p>Dasar sistem operasi, file system, pengguna, pembaruan, dan pengelolaan perangkat.</p><label class="complete-check"><input type="checkbox" class="progress-check" data-progress="os"> Tandai selesai</label></article>
+ <article class="skill-card"><div class="skill-icon">⛨</div><div class="card-index">MODULE 04</div><h3>Keamanan Digital</h3><p>Kata sandi kuat, phishing, pembaruan keamanan, privasi, dan kebiasaan digital aman.</p><label class="complete-check"><input type="checkbox" class="progress-check" data-progress="security"> Tandai selesai</label></article>
+ <article class="skill-card"><div class="skill-icon">{ }</div><div class="card-index">MODULE 05</div><h3>Pemrograman Web</h3><p>Kenali HTML untuk struktur, CSS untuk tampilan, dan JavaScript untuk interaksi.</p><label class="complete-check"><input type="checkbox" class="progress-check" data-progress="coding"> Tandai selesai</label></article>
+ <article class="skill-card"><div class="skill-icon">⌕</div><div class="card-index">MODULE 06</div><h3>Server &amp; Troubleshooting</h3><p>Dasar server dan langkah sistematis mendiagnosis masalah komputer atau jaringan.</p><label class="complete-check"><input type="checkbox" class="progress-check" data-progress="trouble"> Tandai selesai</label></article>
+</div></div></section>
+<section class="section" id="lab"><div class="container"><div class="center-heading"><span class="section-kicker">03 / PRACTICE ZONE</span><h2>TKJ <span class="gradient-text-dark">Interactive Labs</span></h2><p>Latihan ringan di browser untuk membantu memahami konsep. Simulasi ini bersifat edukasi, bukan konfigurasi perangkat sungguhan.</p></div>
+<div class="lab-tabs" role="tablist" aria-label="Pilih lab"><button class="lab-tab active" data-tab="networkLab" role="tab" aria-selected="true">◈ Network Lab</button><button class="lab-tab" data-tab="codingLab" role="tab" aria-selected="false">{ } Coding Playground</button><button class="lab-tab" data-tab="troubleLab" role="tab" aria-selected="false">⌁ Troubleshooting</button></div>
+<div class="lab-panel active" id="networkLab" role="tabpanel"><div class="lab-heading"><div><span class="section-kicker">SIMULATOR 01</span><h3>Bangun topologi sederhana</h3><p>Tekan tombol untuk menambahkan perangkat ke diagram demo.</p></div><button class="small-button" id="resetNetwork">Reset simulasi</button></div><div class="network-workspace"><div class="device-palette"><button data-device="PC">＋ PC Client</button><button data-device="SWITCH">＋ Switch</button><button data-device="ROUTER">＋ Router</button><button data-device="SERVER">＋ Server</button><p>Perangkat demo</p></div><div class="topology-area"><div class="topology-nodes" id="topologyNodes"><div class="topology-node"><span>◈</span><b>Router</b><small>Gateway</small></div><div class="topology-link"></div><div class="topology-node"><span>▦</span><b>Switch</b><small>LAN Core</small></div><div class="topology-link"></div><div class="topology-node"><span>▣</span><b>PC Client</b><small>192.168.1.10</small></div></div><p class="topology-status" id="topologyStatus" aria-live="polite">Topologi demo aktif: 3 perangkat.</p></div></div><div class="notice">Catatan: diagram ini visualisasi konsep. Belum melakukan koneksi jaringan atau pengujian paket sungguhan.</div></div>
+<div class="lab-panel" id="codingLab" role="tabpanel" hidden><div class="lab-heading"><div><span class="section-kicker">PLAYGROUND 02</span><h3>Coba HTML, CSS, dan JavaScript</h3><p>Tulis kode latihan lalu lihat hasilnya pada pratinjau terisolasi.</p></div><button class="small-button" id="runCode">▶ Jalankan kode</button></div><div class="code-layout"><label class="code-editor-label">HTML EDITOR<textarea id="codeInput" spellcheck="false" aria-label="Editor HTML"><!doctype html>
+<html>
+<body style="font-family:Arial;text-align:center;padding:24px;background:#0b1730;color:#e7f7ff">
+  <h1 style="color:#54e6ff">Halo, TKJ! ✨</h1>
+  <p>Ini hasil coding pertamaku.</p>
+  <button onclick="document.querySelector('p').textContent='Berhasil! Kamu membuat interaksi.'">Klik aku</button>
 </body>
-</html>
+</html></textarea></label><div class="preview-wrap"><div class="preview-title">LIVE PREVIEW <span>ISOLATED</span></div><iframe id="codePreview" title="Pratinjau kode" sandbox="allow-scripts" referrerpolicy="no-referrer"></iframe></div></div><p class="notice">Jalankan hanya kode yang kamu pahami. Pratinjau dibatasi ke iframe sandbox dan tidak mendapat akses ke halaman utama.</p></div>
+<div class="lab-panel" id="troubleLab" role="tabpanel" hidden><div class="lab-heading"><div><span class="section-kicker">CHALLENGE 03</span><h3>Diagnosis masalah jaringan</h3><p>Pilih langkah terbaik untuk kasus berikut.</p></div><span class="difficulty">LEVEL PEMULA</span></div><div class="scenario-card"><div class="scenario-icon">⚠</div><div><span class="section-kicker">CASE #001</span><h4>Komputer tersambung ke Wi-Fi, tetapi tidak bisa membuka situs.</h4><p>Apa langkah pemeriksaan awal yang paling masuk akal?</p></div></div><div class="answer-list" id="troubleAnswers"><button data-correct="false">Langsung mengganti motherboard.</button><button data-correct="true">Periksa apakah perangkat lain bisa internet, lalu cek koneksi dan konfigurasi IP.</button><button data-correct="false">Menghapus semua file di komputer.</button></div><p class="feedback" id="troubleFeedback" aria-live="polite">Pilih satu jawaban untuk melihat penjelasan.</p><button class="small-button" id="nextTrouble">Coba ulang</button></div>
+</div></section>
+<section class="section section-alt" id="progres"><div class="container progress-layout"><div><span class="section-kicker">04 / YOUR JOURNEY</span><h2>Progres belajarmu, <span class="gradient-text-dark">selangkah demi selangkah.</span></h2><p>Checklist disimpan secara lokal di browser perangkat ini. Progres tidak otomatis tersinkron ke perangkat lain.</p></div><div class="progress-card"><div class="progress-top"><span>LEARNING PROGRESS</span><strong id="progressText">0 / 6 selesai</strong></div><div class="progress-track"><span id="progressBar"></span></div><div class="progress-bottom"><span id="progressPercent">0%</span><span>KEEP LEARNING ✦</span></div><button class="small-button" id="resetProgress">Reset progres</button></div></div></section>
+<section class="section" id="karier"><div class="container"><div class="center-heading"><span class="section-kicker">CAREER PATH / MASA DEPAN</span><h2>Prospek Karier <span class="gradient-text-dark">TKJ</span></h2><p>Keterampilan TKJ dapat menjadi fondasi untuk beragam peran di bidang teknologi.</p></div><div class="career-grid"><article class="career-card"><span>01</span><h3>Teknisi Komputer</h3><p>Merawat, merakit, dan mendiagnosis masalah perangkat komputer.</p></article><article class="career-card"><span>02</span><h3>Teknisi Jaringan</h3><p>Membantu pemasangan, pemeliharaan, dan pemeriksaan jaringan.</p></article><article class="career-card"><span>03</span><h3>IT Support</h3><p>Membantu pengguna mengatasi masalah perangkat dan aplikasi.</p></article><article class="career-card"><span>04</span><h3>Administrator Sistem</h3><p>Mendukung pengelolaan sistem komputer dan layanan server.</p></article></div></div></section>
+<section class="section contact-section" id="kontak"><div class="container contact-card"><div class="contact-copy"><span class="section-kicker">05 / CONNECT</span><h2>Terus eksplorasi. <span class="gradient-text-dark">Terus berkembang.</span></h2><p>SyahrulProject — website pengenalan jurusan Teknik Komputer dan Jaringan.</p></div><div class="contact-details"><div><span>WEBSITE</span><strong>SyahrulProject</strong></div><div><span>SEKOLAH</span><strong>SMK Binong Permai</strong></div><div><span>EMAIL</span><a href="mailto:syahrulnugraha211@gmail.com">syahrulnugraha211@gmail.com ↗</a></div><div><span>WHATSAPP</span><a href="https://wa.me/6287746332764" target="_blank" rel="noopener noreferrer">Hubungi melalui WhatsApp ↗</a></div><div><span>LOKASI SEKOLAH</span><a href="https://www.google.com/maps/search/?api=1&amp;query=SMK+Binong+Permai+Sukabakti+Curug+Tangerang" target="_blank" rel="noopener noreferrer">Lihat Google Maps ↗</a></div></div></div></section>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><a class="brand" href="#beranda"><span class="brand-mark">SP</span><span>SyahrulProject<small>TKJ CYBER LAB</small></span></a><p>Belajar teknologi hari ini untuk masa depan yang lebih baik.</p><span>© <span id="year"></span> SYAHRULPROJECT</span></div></footer>
+<button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">↑</button>
+<script src="script.js"></script>
+</body></html>
