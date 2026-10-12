@@ -12,3 +12,39 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 
 .career-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.career-card{padding:21px;border:1px solid #23415d;border-radius:14px;background:#0b1a2d}.career-card>span{color:var(--cyan);font-size:10px;font-weight:800;letter-spacing:1px}.career-card h3{font-size:15px;margin:10px 0 7px}.career-card p{font-size:11px;color:var(--muted);margin:0}@media(max-width:900px){.career-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.career-grid{grid-template-columns:1fr}}
+
+
+/* Expandable module explanations */
+.module-toggle{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;margin-top:12px;padding:10px 12px;border:1px solid #24516d;border-radius:9px;background:#0b2940;color:#75e5ff;font:inherit;font-size:11px;font-weight:700;text-align:left;cursor:pointer;transition:background .2s,border-color .2s}
+.module-toggle:hover{background:#103751;border-color:#3b8eae}
+.module-toggle span{font-size:16px}
+.module-detail{margin-top:12px;padding:13px;border-radius:10px;background:#071322;border:1px solid #1b3550;color:#a9bdd5;font-size:12px;line-height:1.65}
+.module-detail h4{margin:0 0 5px;color:#70e2fa;font-size:12px}
+.module-detail p{min-height:0;margin:0 0 12px;color:#a9bdd5;font-size:12px}
+.module-detail p:last-child{margin-bottom:0}
+.module-detail[hidden]{display:none}
+
+/* Dedicated module learning pages */
+.open-module{margin-top:14px;min-height:42px;font-size:12px}
+.module-page-section{background:#07101f;min-height:70vh;border-bottom:1px solid #203754}
+.module-page-section[hidden]{display:none}
+.back-modules{margin-bottom:28px}
+.lesson-header{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;margin:20px 0 34px}
+.lesson-eyebrow{color:#54e6ff;font-size:10px;letter-spacing:2px;font-weight:800}
+.lesson-header h2{font-size:clamp(32px,4vw,50px);line-height:1.08;letter-spacing:-1.5px;margin:12px 0}
+.lesson-header p,.lesson-section p,.lesson-section li{color:#a5b8d1;font-size:14px;line-height:1.8}
+.lesson-art{border:1px solid #23415e;border-radius:18px;padding:16px;background:radial-gradient(circle at 50% 10%,#143a58,#0a1728 70%);min-height:240px;display:grid;place-items:center;overflow:hidden}
+.lesson-art svg{width:100%;max-height:280px}
+.lesson-columns{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:22px 0}
+.lesson-section{border:1px solid #203754;border-radius:15px;padding:23px;background:linear-gradient(145deg,#0d1d32,#0a1728);margin-bottom:18px}
+.lesson-section h3{font-size:19px;margin:0 0 10px}
+.lesson-section h4{color:#65e5ff;margin:20px 0 6px}
+.lesson-section ul{padding-left:20px}
+.lesson-tip{border-left:3px solid #54e6ff;padding:13px 16px;background:#0a2638;border-radius:0 10px 10px 0;color:#c4e7f4;line-height:1.7;font-size:13px}
+.lesson-steps{counter-reset:step;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.lesson-step{border:1px solid #203754;border-radius:12px;padding:16px;background:#0b192b;color:#a5b8d1;font-size:12px;line-height:1.7}
+.lesson-step b{display:block;color:#e7f7ff;font-size:13px;margin-bottom:5px}
+.lesson-step b:before{counter-increment:step;content:counter(step,decimal-leading-zero) " / ";color:#54e6ff}
+.lesson-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.lesson-actions .button{cursor:pointer}
+@media(max-width:700px){.lesson-header,.lesson-columns{grid-template-columns:1fr}.lesson-art{min-height:190px}.lesson-steps{grid-template-columns:1fr}.lesson-section{padding:17px}}
